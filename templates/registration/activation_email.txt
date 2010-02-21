@@ -1,0 +1,1 @@
+http://savethisfor.me/accounts/activate/{{activation_key}}

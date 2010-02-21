@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Do you use twitter?  Do people tweet links you want to check out, but they're pdfs or flash sites you can't use on your phone?  Send it to me and I'll stick it in your feed reader so you can see it later.</p>
+<h2>How it works</h2>
+<p>First, link your twitter account with me.  Then, whenever you see a tweet containing a link you want to view later, mark it as a favorite.  I'll save it and stick it in a feed for you.  You then follow that feed in your feed reader and you'll see all the tweets you saved.  From there, you can remove the link from your twitter favorites if you're done with it.  It's as simple as that, so <a href="{% url auth_login %}">get started!</a></p>
+{% endblock %}
