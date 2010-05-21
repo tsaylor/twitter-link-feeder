@@ -11,9 +11,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^twitter/', include('twitter_app.urls')),
-    url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^accounts/', include('registration.urls')),
+#    url(r'^twitter/', include('twitter_app.urls')),
+#    url(r'^tinymce/', include('tinymce.urls')),
+#    url(r'^accounts/', include('registration.urls')),
     url(r'^', include('website.urls')),
 #    url(r'^$|^(.*)/$', 'feincms.views.base.handler'),
 )

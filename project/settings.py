@@ -80,15 +80,15 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'mptt',
-    'tagging',
-    'tinymce',
-    'feincms',
-    'feincms.module.blog',
-    'feincms.module.page',
+#    'mptt',
+#    'tagging',
+#    'tinymce',
+#    'feincms',
+#    'feincms.module.blog',
+#    'feincms.module.page',
     'website',
-    'twitter_app',
-    'registration',
+#    'twitter_app',
+#    'registration',
 )
 
 FEINCMS_ADMIN_MEDIA = '/media/feincms/'
