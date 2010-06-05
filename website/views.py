@@ -33,7 +33,7 @@ def oauthed_home(request):
         return HttpResponseRedirect('/')
     ou = OauthUser.objects.get(twitter_name=request.session['twitter_name'])
     fav_json = favorite_list(request, twitter_name)
-    return render_to_response('oauthed_home.html', {'rss_link':reverse('rss_favorites', args=[ou.user_hash])})
+    return render_to_response('oauthed_home.html', {'rss_link':reverse('rss_favorites', args=[ou.user_hash])}, context_instance=RequestContext(request))
     #    return HttpResponseRedirect('/')
     #return HttpResponseRedirect('/home/%s' % request.session['twitter_name'])
 #    c = {'feed_url': None} # reverse of the feed view, passing in the twitter username
