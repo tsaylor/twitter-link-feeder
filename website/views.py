@@ -118,3 +118,18 @@ def favorite_list(request, twitter_name=None):
 
     return json
     #return render_to_response('oauthed_home.html', {'debug': json, 'rss_link':'/home/tsaylor/rss'})
+
+
+def is_authed(request, twitter_name = None):
+    ou = get_object_or_404(OauthUser, twitter_name__exact=twitter_name)
+    access_token = ou.oauth_key
+    if not access_token:
+        return HttpResponse("You need an access token!")
+    token = oauth.OAuthToken.from_string(access_token)   
+    
+    # Check if the token works on Twitter
+    auth = is_authenticated(CONSUMER, CONNECTION, token)
+    if auth:
+        return HttpResponse("You are authenticated.")
+    else:
+        return HttpResponse("You are not authenticated.")
